@@ -3,33 +3,12 @@ name: Sider Scan Runner
 on:
   schedule:
     - cron: '0 5 * * 1-5'
-  workflow_dispatch:
-  
+
 jobs:
-  restore-job:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Download the lastest artifact
-        id: latest_artifact
-        continue-on-error: true
-        run: |
-          wget --header "Accept: application/vnd.github.v3+json" --header "Authorization: token ${{github.token}}" https://api.github.com/repos/${{github.repository}}/actions/artifacts -O - \
-            | grep -o 'https://[^"]*/zip' \
-            | head -n 1 \
-            | wget -P /tmp --header "Authorization: token ${{github.token}}" --input-file - \
-            && unzip /tmp/zip -d /tmp
-      - run: ls -la /tmp
-      - name: Cache radump
-        uses: actions/upload-artifact@v2
-        with:
-          name: radump
-          path: /tmp/output.radump
-        if: steps.latest_artifact.outcome == 'success'
   scan-job:
-    needs: [restore-job]
     runs-on: ubuntu-20.04
     container:
-      image: sider/sider_scan_runner:0.0.2
+      image: sider/sider_scan_runner:2.1.0
       env:
         TZ: Asia/Tokyo
       options: -v ${{github.workspace}}:/builds
@@ -39,12 +18,14 @@ jobs:
         with:
           ref: master
           persist-credentials: false
-      - name: Download radump
+      - name: Download the passed radump
         continue-on-error: true
-        uses: actions/download-artifact@v2
-        with:
-          name: radump
-          path: /tmp
+        run: |
+          wget --header "Accept: application/vnd.github.v3+json" --header "Authorization: token ${{github.token}}" https://api.github.com/repos/${{github.repository}}/actions/artifacts -O - \
+            | grep -o 'https://[^"]*/zip' \
+            | head -n 1 \
+            | wget -P /tmp --header "Authorization: token ${{github.token}}" --input-file - \
+            && unzip /tmp/zip -d /tmp
       - run: |
           echo "{ \
             \"user\": { \"contactEmail\": \"dev@siderlabs.com\" }, \
@@ -70,18 +51,18 @@ jobs:
               } \
             }, \
             \"report\": { \
-              \"onlyIfDetect\": true, \
               \"enableDetailReport\": true \
             } \
           }" > .siderscan.json
+      - run: mkdir -p scan_result
       - name: Start analysis
-        working-directory: /scan
         run: |
           sider run \
-          -c /builds/.siderscan.json \
-          -p /builds/ \
+          -c ./.siderscan.json \
+          -p ./ \
           -f /tmp/output.radump \
-          -t "\"Sider Scan Developer\" <scan-dev@siderlabs.com>"
+          -t "\"Sider Scan Developer\" <scan-dev@siderlabs.com>" \
+          -o scan_result
       - name: Upload radump
         uses: actions/upload-artifact@v2
         with:
