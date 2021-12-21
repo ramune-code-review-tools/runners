@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 
 [Full diff](https://github.com/sider/runners/compare/0.55.1...HEAD)
 
+Misc:
+
+- **Metrics File Info** Improve performance for repositories with large number of files [#2866](https://github.com/sider/runners/pull/2866)
+
 ## 0.55.1
 
 [Full diff](https://github.com/sider/runners/compare/0.55.0...0.55.1)
