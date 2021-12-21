@@ -27,6 +27,30 @@ s.add_test_with_git_metadata(
 )
 
 s.add_test_with_git_metadata(
+  "empty_commit",
+  { type: "success",
+    issues: [
+      {
+        id: "metrics_fileinfo",
+        path: "hello.rb",
+        location: nil,
+        message: "hello.rb: loc = 7, last commit datetime = 2021-01-01T10:00:00+09:00",
+        links: [],
+        object: {
+          lines_of_code: 7,
+          last_committed_at: "2021-01-01T10:00:00+09:00",
+          number_of_commits: 2,
+          occurrence: 0,
+          additions: 0,
+          deletions: 0
+        },
+        git_blame_info: nil
+      }
+    ],
+    analyzer: { name: "Metrics File Info", version: default_version } }
+)
+
+s.add_test_with_git_metadata(
   "binary_files",
   { type: "success",
     issues: [

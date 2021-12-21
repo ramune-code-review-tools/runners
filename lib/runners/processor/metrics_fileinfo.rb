@@ -111,11 +111,58 @@ module Runners
       @last_committed_at ||= {}
     end
 
+    def parse_commit_line(commit_line)
+      # Parse single* commit record from `git log -z`, where separator is \0\0
+      #
+      # Sample git log -z ... output could look like this.
+      # Note that there are 5 commits here, and 2 of them are empty.
+      #
+      # *The `commit_line` argument has a bit vague meaning here, since in case of line two, it can "contain" the commits.
+      # The reason is that empty commit "stick" to next commit in the output (they are not properly divided by \0\0)
+      #
+      # 2021-12-20T12:51:39+09:00\nC\0\0
+      # 2021-12-20T12:51:28+09:00\02021-12-20T12:51:09+09:00\nB\0\0
+      # 2021-12-20T12:50:58+09:00\nA\0\0
+      # 2021-12-20T12:50:35+09:00
+      date, files_str = commit_line.split("\n", 2)
+      raise "Commit date could not be determined." if date.nil?
+
+      date = date.split("\0")[-1]  # commits with no filechanges stick to the next commit in output, pick the right one
+      files_str = files_str || ""  # in case commit has no changed files, files_str could be nil
+      [date, files_str.split("\0")]
+    end
+
+    def datemax(first, second)
+      # Return the greater (later) of two iso8601 date strings, with empty string always counting as earlier one
+      return second if first == ""
+      return first if second == ""
+
+      # compare date strings while also taking care of timezones
+      Time.parse(first) < Time.parse(second) ? second : first
+    end
+
     def analyze_last_committed_at(targets)
       trace_writer.message "Analyzing last commit time..." do
-        Parallel.each(targets, in_threads: 8) do |target|
-          stdout, _ = git("log", "-1", "--format=format:%aI", "--", target)
-          last_committed_at[target] = stdout
+
+        # mark which files currently exist, so we don't records dates of deleted files
+        for target in targets do
+          last_committed_at[target] = ""
+        end
+
+        # Read the entire commit history in bulk, and process it on Ruby side.
+        # This is around 30-times faster than calling git log for each file separately.
+        stdout, _ = git("log", "--format=format:%aI", "--name-only", "-z")
+        stdout.split("\0\0").each do |commit|
+          date, files = parse_commit_line(commit)
+          # for each changed line in a commit
+          for file in files do
+            filepath = Pathname.new(file)
+            # track only current files (ignore deleted ones)
+            if last_committed_at.key?(filepath)
+              # if a file was modified, and it's newer than current value, update it
+              last_committed_at[filepath] = datemax(last_committed_at[filepath], date)
+            end
+          end
         end
       end
     end

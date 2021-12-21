@@ -22,6 +22,10 @@ module Runners
 
     def last_committed_at: () -> Hash[Pathname, String]
 
+    def parse_commit_line: (String) -> [String, Array[String]]
+
+    def datemax: (String, String) -> String
+
     def analyze_last_committed_at: (Array[Pathname]) -> void
 
     def code_churn: () -> Hash[Pathname, Hash[Symbol, Integer]]
