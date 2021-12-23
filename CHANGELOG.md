@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 
 [Full diff](https://github.com/sider/runners/compare/0.55.2...HEAD)
 
+Updated tools:
+
+- **ESLint** 7.32.0 -> 8.5.0 [#2864](https://github.com/sider/runners/pull/2864)
+
 ## 0.55.2
 
 [Full diff](https://github.com/sider/runners/compare/0.55.1...0.55.2)

@@ -20,7 +20,6 @@ module Runners
 
       let :issue, object(
         severity: string,
-        category: string?,
         recommended: enum?(boolean, string),
       )
     end
@@ -146,7 +145,6 @@ module Runners
             links: Array(details.dig(:docs, :url)),
             object: {
               severity: normalize_severity(details[:severity]),
-              category: details.dig(:docs, :category),
               recommended: details.dig(:docs, :recommended),
             },
             schema: SCHEMA.issue,

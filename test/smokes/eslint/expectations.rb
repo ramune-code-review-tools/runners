@@ -1,6 +1,6 @@
 s = Runners::Testing::Smoke
 
-default_version = "7.32.0"
+default_version = "8.5.0"
 
 s.add_test(
   "no_config",
@@ -12,7 +12,7 @@ s.add_test(
       id: "for-direction",
       message: "The update clause in this loop moves the variable in the wrong direction.",
       links: %w[https://eslint.org/docs/rules/for-direction],
-      object: { severity: "error", category: "Possible Errors", recommended: true },
+      object: { severity: "error", recommended: true },
       git_blame_info: {
         commit: :_, line_hash: "f3ad79b5672cb93aaade2944995ccc7766faaac4", original_line: 1, final_line: 1
       }
@@ -23,7 +23,7 @@ s.add_test(
       id: "no-empty",
       message: "Empty block statement.",
       links: %w[https://eslint.org/docs/rules/no-empty],
-      object: { severity: "error", category: "Possible Errors", recommended: true },
+      object: { severity: "error", recommended: true },
       git_blame_info: {
         commit: :_, line_hash: "f3ad79b5672cb93aaade2944995ccc7766faaac4", original_line: 1, final_line: 1
       }
@@ -34,7 +34,7 @@ s.add_test(
       id: "prefer-const",
       message: "'a' is never reassigned. Use 'const' instead.",
       links: %w[https://eslint.org/docs/rules/prefer-const],
-      object: { severity: "warn", category: "ECMAScript 6", recommended: false },
+      object: { severity: "warn", recommended: false },
       git_blame_info: {
         commit: :_, line_hash: "e151e70048f592122d03aeceab9fcf5ab50765e2", original_line: 4, final_line: 4
       }
@@ -45,7 +45,7 @@ s.add_test(
       id: "vars-on-top",
       message: "All 'var' declarations must be at the top of the function scope.",
       links: %w[https://eslint.org/docs/rules/vars-on-top],
-      object: { severity: "warn", category: "Best Practices", recommended: false },
+      object: { severity: "warn", recommended: false },
       git_blame_info: {
         commit: :_, line_hash: "f3ad79b5672cb93aaade2944995ccc7766faaac4", original_line: 1, final_line: 1
       }
@@ -68,7 +68,7 @@ s.add_test(
       id: "no-console",
       message: "Unexpected console statement.",
       links: [],
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "ad253ddf045d147f097d310d41c67964b27ee471", original_line: 1, final_line: 1
       }
@@ -102,7 +102,7 @@ s.add_test(
       id: "no-constant-condition",
       message: "Unexpected constant condition.",
       links: %w[https://eslint.org/docs/rules/no-constant-condition],
-      object: { severity: "error", category: "Possible Errors", recommended: true },
+      object: { severity: "error", recommended: true },
       git_blame_info: {
         commit: :_, line_hash: "19f7c599ce45fd313bdab7d41271e27f978a1f27", original_line: 1, final_line: 1
       }
@@ -118,7 +118,7 @@ s.add_test(
       id: "no-self-compare",
       message: "Comparing to itself is potentially pointless.",
       links: %w[https://eslint.org/docs/rules/no-self-compare],
-      object: { severity: "warn", category: "Best Practices", recommended: false },
+      object: { severity: "warn", recommended: false },
       git_blame_info: {
         commit: :_, line_hash: "19f7c599ce45fd313bdab7d41271e27f978a1f27", original_line: 1, final_line: 1
       }
@@ -150,7 +150,7 @@ s.add_test(
       id: "no-unused-vars",
       path: "src/index.js",
       location: { start_line: 1, start_column: 5, end_line: 1, end_column: 6 },
-      object: { severity: "error", category: "Variables", recommended: true },
+      object: { severity: "error", recommended: true },
       git_blame_info: {
         commit: :_, line_hash: "41477d1b34124a7763e6dae5cb7067201fed41e4", original_line: 1, final_line: 1
       }
@@ -174,7 +174,7 @@ s.add_test(
       id: "react/jsx-indent",
       path: "src/App.jsx",
       location: { start_line: 6, start_column: 7, end_line: 6, end_column: 11 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "ba6152968b30a6d813c0d157ae52a4af008787ac", original_line: 6, final_line: 6
       }
@@ -185,7 +185,7 @@ s.add_test(
       id: "react/jsx-no-literals",
       path: "src/App.jsx",
       location: { start_line: 6, start_column: 11, end_line: 6, end_column: 23 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "ba6152968b30a6d813c0d157ae52a4af008787ac", original_line: 6, final_line: 6
       }
@@ -196,7 +196,7 @@ s.add_test(
       id: "react/jsx-one-expression-per-line",
       path: "src/App.jsx",
       location: { start_line: 6, start_column: 11, end_line: 6, end_column: 23 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "ba6152968b30a6d813c0d157ae52a4af008787ac", original_line: 6, final_line: 6
       }
@@ -207,7 +207,7 @@ s.add_test(
       id: "react/prefer-stateless-function",
       path: "src/App.jsx",
       location: { start_line: 3, start_column: 16, end_line: 9, end_column: 2 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "56c08f685137a9fbc5a2135a434c0ac855862bde", original_line: 3, final_line: 3
       }
@@ -218,7 +218,7 @@ s.add_test(
       id: "react/require-optimization",
       path: "src/App.jsx",
       location: { start_line: 3, start_column: 16, end_line: 9, end_column: 2 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "56c08f685137a9fbc5a2135a434c0ac855862bde", original_line: 3, final_line: 3
       }
@@ -251,7 +251,7 @@ s.add_test(
       id: "semi",
       path: "test.js",
       location: { start_line: 1, start_column: 83, end_line: 2, end_column: 1 },
-      object: { severity: "error", category: "Stylistic Issues", recommended: false },
+      object: { severity: "error", recommended: false },
       git_blame_info: {
         commit: :_, line_hash: "04578e6c1c3221c3a3ac0da2f69ddace55b594ec", original_line: 1, final_line: 1
       }
@@ -271,7 +271,7 @@ s.add_test(
       id: "max-len",
       path: "app.js",
       location: { start_line: 1, start_column: 1, end_line: 1, end_column: 83 },
-      object: { severity: "warn", category: "Stylistic Issues", recommended: false },
+      object: { severity: "warn", recommended: false },
       git_blame_info: {
         commit: :_, line_hash: "04578e6c1c3221c3a3ac0da2f69ddace55b594ec", original_line: 1, final_line: 1
       }
@@ -282,7 +282,7 @@ s.add_test(
       id: "semi",
       path: "app.js",
       location: { start_line: 1, start_column: 83, end_line: 2, end_column: 1 },
-      object: { severity: "error", category: "Stylistic Issues", recommended: false },
+      object: { severity: "error", recommended: false },
       git_blame_info: {
         commit: :_, line_hash: "04578e6c1c3221c3a3ac0da2f69ddace55b594ec", original_line: 1, final_line: 1
       }
@@ -301,7 +301,7 @@ s.add_test(
       id: "0299e5a2c549669334ef4905ed3a636d9ae07723",
       path: "src/App.jsx",
       location: { start_line: 1, start_column: 1 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "6033e7a3a30a7570c4033dd784209f02ea9affa7", original_line: 1, final_line: 1
       }
@@ -312,7 +312,7 @@ s.add_test(
       id: "0299e5a2c549669334ef4905ed3a636d9ae07723",
       path: "src/application.jsx",
       location: { start_line: 1, start_column: 1 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "6033e7a3a30a7570c4033dd784209f02ea9affa7", original_line: 1, final_line: 1
       }
@@ -323,7 +323,7 @@ s.add_test(
       id: "no-undef",
       path: "src/index.js",
       location: { start_line: 1, start_column: 9, end_line: 1, end_column: 12 },
-      object: { severity: "error", category: "Variables", recommended: true },
+      object: { severity: "error", recommended: true },
       git_blame_info: {
         commit: :_, line_hash: "1344e9df550a53b40d135830a9289d34f4246299", original_line: 1, final_line: 1
       }
@@ -334,7 +334,7 @@ s.add_test(
       id: "no-unused-vars",
       path: "src/index.js",
       location: { start_line: 1, start_column: 5, end_line: 1, end_column: 6 },
-      object: { severity: "error", category: "Variables", recommended: true },
+      object: { severity: "error", recommended: true },
       git_blame_info: {
         commit: :_, line_hash: "1344e9df550a53b40d135830a9289d34f4246299", original_line: 1, final_line: 1
       }
@@ -345,7 +345,7 @@ s.add_test(
       id: "no-unused-vars",
       path: "src/index.js",
       location: { start_line: 2, start_column: 10, end_line: 2, end_column: 13 },
-      object: { severity: "error", category: "Variables", recommended: true },
+      object: { severity: "error", recommended: true },
       git_blame_info: {
         commit: :_, line_hash: "7961454e7d4897ddbb8ff6ba75873a89c361aca4", original_line: 2, final_line: 2
       }
@@ -365,7 +365,7 @@ s.add_test(
       id: "f5e284aac9909f94f39932ce3290c6171d728ba2",
       path: "src/App.jsx",
       location: { start_line: 1, start_column: 1 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "6033e7a3a30a7570c4033dd784209f02ea9affa7", original_line: 1, final_line: 1
       }
@@ -376,7 +376,7 @@ s.add_test(
       id: "f5e284aac9909f94f39932ce3290c6171d728ba2",
       path: "src/index.jsx",
       location: { start_line: 1, start_column: 1 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "6033e7a3a30a7570c4033dd784209f02ea9affa7", original_line: 1, final_line: 1
       }
@@ -395,7 +395,7 @@ s.add_test(
       id: "0299e5a2c549669334ef4905ed3a636d9ae07723",
       path: "src/App.jsx",
       location: { start_line: 1, start_column: 1 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "6033e7a3a30a7570c4033dd784209f02ea9affa7", original_line: 1, final_line: 1
       }
@@ -406,7 +406,7 @@ s.add_test(
       id: "0299e5a2c549669334ef4905ed3a636d9ae07723",
       path: "src/application.jsx",
       location: { start_line: 1, start_column: 1 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "6033e7a3a30a7570c4033dd784209f02ea9affa7", original_line: 1, final_line: 1
       }
@@ -434,7 +434,7 @@ s.add_test(
       id: "39c2f172685fdca9a95e89c8abf2305e91b4ec28",
       path: "index.js",
       location: { start_line: 2, start_column: 14 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "c1b43b28d2de5aeb81959f4eb99eb0fa83753069", original_line: 2, final_line: 2
       }
@@ -473,7 +473,7 @@ s.add_test(
       links: %w[https://eslint.org/docs/rules/eqeqeq],
       path: "index.js",
       location: { start_line: 1, start_column: 7, end_line: 1, end_column: 9 },
-      object: { severity: "error", category: "Best Practices", recommended: false },
+      object: { severity: "error", recommended: false },
       git_blame_info: {
         commit: :_, line_hash: "b08eba45f95518788b876fcfad0b8760e767fea6", original_line: 1, final_line: 1
       }
@@ -490,11 +490,11 @@ s.add_test(
       id: "@typescript-eslint/no-unused-vars",
       message: "'x' is assigned a value but never used.",
       links: %w[
-        https://github.com/typescript-eslint/typescript-eslint/blob/v4.31.2/packages/eslint-plugin/docs/rules/no-unused-vars.md
+        https://github.com/typescript-eslint/typescript-eslint/blob/v5.8.0/packages/eslint-plugin/docs/rules/no-unused-vars.md
       ],
       path: "index.ts",
       location: { start_line: 1, start_column: 7, end_line: 1, end_column: 8 },
-      object: { severity: "warn", category: "Variables", recommended: "warn" },
+      object: { severity: "warn", recommended: "warn" },
       git_blame_info: {
         commit: :_, line_hash: "88b17d4beeec7112cf85384c64daffaba01244d2", original_line: 1, final_line: 1
       }
@@ -521,7 +521,7 @@ s.add_test(
       id: "id-denylist",
       path: "test.js",
       location: { start_line: 1, start_column: 1, end_line: 1, end_column: 2 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "089c7565d54e338b719647421b55b3e644cf0a4b", original_line: 1, final_line: 1
       }
@@ -532,7 +532,7 @@ s.add_test(
       links: %w[https://eslint.org/docs/rules/no-constant-condition],
       path: "test.js",
       location: { start_line: 1, start_column: 5, end_line: 1, end_column: 16 },
-      object: { severity: "error", category: "Possible Errors", recommended: true },
+      object: { severity: "error", recommended: true },
       git_blame_info: {
         commit: :_, line_hash: "089c7565d54e338b719647421b55b3e644cf0a4b", original_line: 1, final_line: 1
       }
@@ -543,7 +543,7 @@ s.add_test(
       id: "no-loss-of-precision",
       path: "test.js",
       location: { start_line: 1, start_column: 1, end_line: 1, end_column: 2 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "089c7565d54e338b719647421b55b3e644cf0a4b", original_line: 1, final_line: 1
       }
@@ -554,7 +554,7 @@ s.add_test(
       id: "no-nonoctal-decimal-escape",
       path: "test.js",
       location: { start_line: 1, start_column: 1, end_line: 1, end_column: 2 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "089c7565d54e338b719647421b55b3e644cf0a4b", original_line: 1, final_line: 1
       }
@@ -565,7 +565,7 @@ s.add_test(
       id: "no-promise-executor-return",
       path: "test.js",
       location: { start_line: 1, start_column: 1, end_line: 1, end_column: 2 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "089c7565d54e338b719647421b55b3e644cf0a4b", original_line: 1, final_line: 1
       }
@@ -576,7 +576,7 @@ s.add_test(
       id: "no-unreachable-loop",
       path: "test.js",
       location: { start_line: 1, start_column: 1, end_line: 1, end_column: 2 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "089c7565d54e338b719647421b55b3e644cf0a4b", original_line: 1, final_line: 1
       }
@@ -586,7 +586,7 @@ s.add_test(
       id: "no-unsafe-optional-chaining",
       path: "test.js",
       location: { start_line: 1, start_column: 1, end_line: 1, end_column: 2 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "089c7565d54e338b719647421b55b3e644cf0a4b", original_line: 1, final_line: 1
       }
@@ -605,7 +605,7 @@ s.add_test(
       links: %w[https://eslint.org/docs/rules/no-extra-semi],
       path: "foo.js",
       location: { start_line: 1, start_column: 5, end_line: 1, end_column: 6 },
-      object: { severity: "error", category: "Possible Errors", recommended: true },
+      object: { severity: "error", recommended: true },
       git_blame_info: {
         commit: :_, line_hash: "5786438d311af019d0e3d06977c4ab84a25d591b", original_line: 1, final_line: 1
       }
@@ -616,7 +616,7 @@ s.add_test(
       links: %w[https://eslint.org/docs/rules/no-extra-semi],
       path: "src/bar.js",
       location: { start_line: 1, start_column: 5, end_line: 1, end_column: 6 },
-      object: { severity: "error", category: "Possible Errors", recommended: true },
+      object: { severity: "error", recommended: true },
       git_blame_info: {
         commit: :_, line_hash: "5f94a2b6c745ba6538ff265a8d1f1f98b8538623", original_line: 1, final_line: 1
       }
@@ -627,7 +627,7 @@ s.add_test(
       links: %w[https://eslint.org/docs/rules/no-unused-expressions],
       path: "foo.js",
       location: { start_line: 1, start_column: 1, end_line: 1, end_column: 5 },
-      object: { severity: "warn", category: "Best Practices", recommended: false },
+      object: { severity: "warn", recommended: false },
       git_blame_info: {
         commit: :_, line_hash: "5786438d311af019d0e3d06977c4ab84a25d591b", original_line: 1, final_line: 1
       }
@@ -638,7 +638,7 @@ s.add_test(
       links: %w[https://eslint.org/docs/rules/no-unused-expressions],
       path: "src/bar.js",
       location: { start_line: 1, start_column: 1, end_line: 1, end_column: 5 },
-      object: { severity: "warn", category: "Best Practices", recommended: false },
+      object: { severity: "warn", recommended: false },
       git_blame_info: {
         commit: :_, line_hash: "5f94a2b6c745ba6538ff265a8d1f1f98b8538623", original_line: 1, final_line: 1
       }
@@ -729,7 +729,7 @@ s.add_test(
       links: %w[https://eslint.org/docs/rules/no-undef],
       path: "foo.js",
       location: { start_line: 3, start_column: 1, end_line: 3, end_column: 8 },
-      object: { severity: "error", category: "Variables", recommended: true },
+      object: { severity: "error", recommended: true },
       git_blame_info: {
         commit: :_, line_hash: "ad0c28a04d30c0f5a968852042a892ccc53b4984", original_line: 3, final_line: 3
       }
@@ -748,7 +748,7 @@ s.add_test(
       links: [],
       path: "foo.js",
       location: { start_line: 1, start_column: 1, end_line: 1, end_column: 2 },
-      object: { severity: "error", category: nil, recommended: nil },
+      object: { severity: "error", recommended: nil },
       git_blame_info: {
         commit: :_, line_hash: "8f75a48ad4f7cad21e6a885a1aff81ced8b4d74b", original_line: 1, final_line: 1
       }
@@ -759,7 +759,7 @@ s.add_test(
       links: %w[https://eslint.org/docs/rules/no-buffer-constructor],
       path: "foo.js",
       location: { start_line: 3, start_column: 1, end_line: 3, end_column: 14 },
-      object: { severity: "error", category: "Node.js and CommonJS", recommended: false },
+      object: { severity: "error", recommended: false },
       git_blame_info: {
         commit: :_, line_hash: "03398b00165efab2c130dd72de73fbb43235f6f0", original_line: 3, final_line: 3
       }
@@ -770,7 +770,7 @@ s.add_test(
       links: %w[https://eslint.org/docs/rules/no-catch-shadow],
       path: "foo.js",
       location: { start_line: 7, start_column: 1, end_line: 7, end_column: 15 },
-      object: { severity: "error", category: "Variables", recommended: false },
+      object: { severity: "error", recommended: false },
       git_blame_info: {
         commit: :_, line_hash: "fae77ce2f3e491ee39bbdb0487df99f715c4e6d0", original_line: 7, final_line: 7
       }
@@ -805,7 +805,7 @@ s.add_test(
       path: "index.js",
       links: ["https://eslint.org/docs/rules/eqeqeq"],
       location: { start_line: 1, start_column: 15, end_line: 1, end_column: 17 },
-      object: { severity: "warn", category: "Best Practices", recommended: false },
+      object: { severity: "warn", recommended: false },
       git_blame_info: {
         commit: :_, line_hash: "6d7664674a58626a18571a7015a6a2e9b99f7c3d", original_line: 1, final_line: 1
       }

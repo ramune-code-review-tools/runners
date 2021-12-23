@@ -4,8 +4,8 @@ module.exports = (results, data) => {
 
   const docs = ruleId => {
     if (meta && meta[ruleId] && meta[ruleId].docs) {
-      const { category, recommended, url } = meta[ruleId].docs;
-      return { category, recommended, url };
+      const { recommended, url } = meta[ruleId].docs;
+      return { recommended, url };
     } else {
       return null;
     }
