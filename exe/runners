@@ -19,7 +19,7 @@ begin
     argv: ARGV.dup,
     stdout: STDOUT,
     stderr: STDERR,
-    options_json: ENV.delete("RUNNERS_OPTIONS"),
+    options_json: ENV.delete("RUNNERS_OPTIONS") { "{}" },
   ).run
 rescue => exn
   Bugsnag.notify(exn)

@@ -95,18 +95,6 @@
           (::String | nil) <: ::String
             nil <: ::String
     code: Ruby::MethodBodyTypeMismatch
-- file: lib/runners/io/aws_s3.rb
-  diagnostics:
-  - range:
-      start:
-        line: 23
-        character: 27
-      end:
-        line: 23
-        character: 30
-    severity: ERROR
-    message: Type `singleton(::Tempfile)` does not have method `new`
-    code: Ruby::NoMethod
 - file: lib/runners/issue.rb
   diagnostics:
   - range:
@@ -129,8 +117,8 @@
         line: 137
         character: 60
     severity: ERROR
-    message: 'Method parameters are incompatible with declaration `(*::String, ?flags:
-      ::Array[::String], ?subcommand: ::String) -> void`'
+    message: 'Method parameters are incompatible with declaration `(*::String, ?subcommand:
+      ::String, ?flags: ::Array[::String]) -> void`'
     code: Ruby::MethodArityMismatch
 - file: lib/runners/processor/actionlint.rb
   diagnostics:
@@ -213,9 +201,9 @@
         line: 26
         character: 23
     severity: ERROR
-    message: 'Method parameters are incompatible with declaration `(trace_writer:
-      ::Runners::TraceWriter, shell: ::Runners::Shell, config: ::Runners::Config,
-      working_dir: ::Pathname, guid: ::String, ?options: ::Runners::Options) -> void`'
+    message: 'Method parameters are incompatible with declaration `(guid: ::String,
+      working_dir: ::Pathname, config: ::Runners::Config, shell: ::Runners::Shell,
+      trace_writer: ::Runners::TraceWriter, ?options: ::Runners::Options) -> void`'
     code: Ruby::MethodArityMismatch
   - range:
       start:
@@ -225,8 +213,8 @@
         line: 27
         character: 16
     severity: ERROR
-    message: 'More keyword arguments are required: trace_writer, shell, config, working_dir,
-      guid'
+    message: 'More keyword arguments are required: guid, working_dir, config, shell,
+      trace_writer'
     code: Ruby::InsufficientKeywordArguments
   - range:
       start:
@@ -256,8 +244,8 @@
         line: 28
         character: 32
     severity: ERROR
-    message: 'More keyword arguments are required: trace_writer, shell, config, working_dir,
-      guid'
+    message: 'More keyword arguments are required: guid, working_dir, config, shell,
+      trace_writer'
     code: Ruby::InsufficientKeywordArguments
   - range:
       start:
@@ -347,20 +335,6 @@
     code: Ruby::ArgumentTypeMismatch
   - range:
       start:
-        line: 204
-        character: 23
-      end:
-        line: 204
-        character: 74
-    severity: ERROR
-    message: |-
-      Cannot find compatible overloading of method `create` of type `singleton(::Tempfile)`
-      Method types:
-        def create: (?::String, ?(::String | nil), ?mode: ::Integer, **untyped) -> ::File
-                  | [A] (?::String, ?(::String | nil), ?mode: ::Integer, **untyped) { (::File) -> A } -> A
-    code: Ruby::UnresolvedOverloading
-  - range:
-      start:
         line: 231
         character: 20
       end:
@@ -412,7 +386,7 @@
         character: 88
     severity: ERROR
     message: 'Method parameters are incompatible with declaration `(::String, *::Runners::Shell::command_argument,
-      ?sleep: ^(::Numeric) -> ::Numeric, ?tries: ::Integer) -> [::String, ::String]`'
+      ?tries: ::Integer, ?sleep: ^(::Numeric) -> ::Numeric) -> [::String, ::String]`'
     code: Ruby::MethodArityMismatch
   - range:
       start:
@@ -423,8 +397,8 @@
         character: 60
     severity: ERROR
     message: 'Method parameters are incompatible with declaration `(::String, *::Runners::Shell::command_argument,
-      ?merge_output: ::boolish, ?stdin_data: (::String | nil), ?is_success: ^(::Process::Status)
-      -> ::boolish, ?chdir: (::Pathname | nil), ?raise_on_failure: ::boolish, ?trace_command_line:
-      ::boolish, ?trace_stderr: ::boolish, ?trace_stdout: ::boolish) -> [::String,
+      ?trace_stdout: ::boolish, ?trace_stderr: ::boolish, ?trace_command_line: ::boolish,
+      ?raise_on_failure: ::boolish, ?chdir: (::Pathname | nil), ?is_success: ^(::Process::Status)
+      -> ::boolish, ?stdin_data: (::String | nil), ?merge_output: ::boolish) -> [::String,
       ::String, ::Process::Status]`'
     code: Ruby::MethodArityMismatch
