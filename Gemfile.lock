@@ -54,7 +54,7 @@ GEM
     erb (2.2.3)
       cgi
     ffi (1.15.4)
-    fileutils (1.5.0)
+    fileutils (1.6.0)
     forwardable (1.3.2)
     git_diff_parser (4.0.0)
     i18n (1.8.10)
