@@ -134,7 +134,7 @@ class HarnessTest < Minitest::Test
       assert_instance_of Results::Error, result
       assert_instance_of JSON::ParserError, result.exception
       assert_equal(
-        [{ trace: :error, message: "809: unexpected token at 'something wrong' (JSON::ParserError)" }],
+        [{ trace: :error, message: "859: unexpected token at 'something wrong' (JSON::ParserError)" }],
         trace_writer.writer.map { |entry| entry.slice(:trace, :message) },
       )
     end
