@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 Updated tools:
 
 - **ESLint** 7.32.0 -> 8.5.0 [#2864](https://github.com/sider/runners/pull/2864)
+- **SwiftLint** 0.45.0 -> 0.45.1 [#2838](https://github.com/sider/runners/pull/2838)
 
 ## 0.55.2
 
