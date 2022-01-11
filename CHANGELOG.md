@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 Updated tools:
 
 - **actionlint** 1.6.7 -> 1.6.8 [#2816](https://github.com/sider/runners/pull/2816)
+- **remark-lint** 10.0.0 -> 10.0.1 (remark-cli) [#2823](https://github.com/sider/runners/pull/2823)
 
 ## 0.56.0
 
