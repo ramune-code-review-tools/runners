@@ -1,6 +1,6 @@
 s = Runners::Testing::Smoke
 
-default_version = "1.18.1"
+default_version = "1.19.0"
 
 s.add_test(
   "with_broken_sider_yml",
@@ -77,7 +77,7 @@ s.add_test(
     {
       id: "detekt.SwallowedException",
       path: "src/ComplexClass.kt",
-      location: { start_line: 19, start_column: 15 },
+      location: { start_line: 19, start_column: 22 },
       message: "The caught exception is swallowed. The original exception could be lost.",
       links: [],
       object: { severity: "warning" },
@@ -88,7 +88,18 @@ s.add_test(
     {
       id: "detekt.SwallowedException",
       path: "src/ComplexClass.kt",
-      location: { start_line: 34, start_column: 19 },
+      location: { start_line: 22, start_column: 26 },
+      message: "The caught exception is swallowed. The original exception could be lost.",
+      links: [],
+      object: { severity: "warning" },
+      git_blame_info: {
+        commit: :_, line_hash: "3e7fe77bad13349be1e389420c32c32f522bb0ee", original_line: 22, final_line: 22
+      }
+    },
+    {
+      id: "detekt.SwallowedException",
+      path: "src/ComplexClass.kt",
+      location: { start_line: 34, start_column: 26 },
       message: "The caught exception is swallowed. The original exception could be lost.",
       links: [],
       object: { severity: "warning" },
@@ -173,7 +184,7 @@ s.add_test(
     {
       id: "detekt.SwallowedException",
       path: "src/ComplexClass.kt",
-      location: { start_line: 19, start_column: 15 },
+      location: { start_line: 19, start_column: 22 },
       message: "The caught exception is swallowed. The original exception could be lost.",
       links: [],
       object: { severity: "warning" },
@@ -184,7 +195,18 @@ s.add_test(
     {
       id: "detekt.SwallowedException",
       path: "src/ComplexClass.kt",
-      location: { start_line: 34, start_column: 19 },
+      location: { start_line: 22, start_column: 26 },
+      message: "The caught exception is swallowed. The original exception could be lost.",
+      links: [],
+      object: { severity: "warning" },
+      git_blame_info: {
+        commit: :_, line_hash: "3e7fe77bad13349be1e389420c32c32f522bb0ee", original_line: 22, final_line: 22
+      }
+    },
+    {
+      id: "detekt.SwallowedException",
+      path: "src/ComplexClass.kt",
+      location: { start_line: 34, start_column: 26 },
       message: "The caught exception is swallowed. The original exception could be lost.",
       links: [],
       object: { severity: "warning" },
