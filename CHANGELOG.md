@@ -16,6 +16,10 @@ Updated tools:
 - **PMD CPD** 6.40.0 -> 6.41.0 [#2833](https://github.com/sider/runners/pull/2833)
 - **remark-lint** 10.0.0 -> 10.0.1 (remark-cli) [#2823](https://github.com/sider/runners/pull/2823)
 
+Misc:
+
+- **remark-lint** Bump remark-preset-lint-recommended from 6.1.1 to 6.1.2 [#2843](https://github.com/sider/runners/pull/2843)
+
 ## 0.56.0
 
 [Full diff](https://github.com/sider/runners/compare/0.55.2...0.56.0)
