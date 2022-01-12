@@ -1,6 +1,6 @@
 s = Runners::Testing::Smoke
 
-default_version = "5.1.2"
+default_version = "5.2.0"
 
 s.add_test(
   "success",
@@ -57,6 +57,17 @@ s.add_test(
       id: "SQL Injection-103",
       message: "Rails 4.2.7 contains a SQL injection vulnerability (CVE-2016-6317). Upgrade to Rails 4.2.7.1",
       links: %w[https://groups.google.com/d/msg/ruby-security-ann/WccgKSKiPZA/9DrsDVSoCgAJ],
+      object: { severity: "High" },
+      git_blame_info: {
+        commit: :_, line_hash: "667878ceb84268d96f51ee7b50cfa175ae86fe58", original_line: 81, final_line: 81
+      }
+    },
+    {
+      path: "Gemfile.lock",
+      location: { start_line: 81 },
+      id: "Unmaintained Dependency-120",
+      message: "Support for Rails 4.2.7 ended on 2017-04-27",
+      links: %w[https://brakemanscanner.org/docs/warning_types/unmaintained_dependency/],
       object: { severity: "High" },
       git_blame_info: {
         commit: :_, line_hash: "667878ceb84268d96f51ee7b50cfa175ae86fe58", original_line: 81, final_line: 81
@@ -122,6 +133,17 @@ s.add_test(
       id: "SQL Injection-103",
       message: "Rails 4.2.7 contains a SQL injection vulnerability (CVE-2016-6317). Upgrade to Rails 4.2.7.1",
       links: %w[https://groups.google.com/d/msg/ruby-security-ann/WccgKSKiPZA/9DrsDVSoCgAJ],
+      object: { severity: "High" },
+      git_blame_info: {
+        commit: :_, line_hash: "667878ceb84268d96f51ee7b50cfa175ae86fe58", original_line: 81, final_line: 81
+      }
+    },
+    {
+      path: "rails_app/Gemfile.lock",
+      location: { start_line: 81 },
+      id: "Unmaintained Dependency-120",
+      message: "Support for Rails 4.2.7 ended on 2017-04-27",
+      links: %w[https://brakemanscanner.org/docs/warning_types/unmaintained_dependency/],
       object: { severity: "High" },
       git_blame_info: {
         commit: :_, line_hash: "667878ceb84268d96f51ee7b50cfa175ae86fe58", original_line: 81, final_line: 81
