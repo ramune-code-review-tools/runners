@@ -3,7 +3,7 @@
     "remark-cli": "10.0.1",
     "remark-gfm": "2.0.0",
     "remark-lint": "9.1.0",
-    "remark-preset-lint-consistent": "5.1.0",
+    "remark-preset-lint-consistent": "5.1.1",
     "remark-preset-lint-recommended": "6.1.1",
     "remark-preset-lint-markdown-style-guide": "5.1.1",
     "remark-preset-lint-sider": "0.8.2",
