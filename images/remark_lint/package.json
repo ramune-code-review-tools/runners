@@ -5,7 +5,7 @@
     "remark-lint": "9.1.0",
     "remark-preset-lint-consistent": "5.1.1",
     "remark-preset-lint-recommended": "6.1.1",
-    "remark-preset-lint-markdown-style-guide": "5.1.1",
+    "remark-preset-lint-markdown-style-guide": "5.1.2",
     "remark-preset-lint-sider": "0.8.2",
     "remark-validate-links": "11.0.2",
     "vfile-reporter-json": "2.0.2"
