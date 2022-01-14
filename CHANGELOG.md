@@ -10,6 +10,7 @@ Updated tools:
 
 - **actionlint** 1.6.7 -> 1.6.8 [#2816](https://github.com/sider/runners/pull/2816)
 - **Checkstyle** 9.1 -> 9.2.1 [#2884](https://github.com/sider/runners/pull/2884)
+- **CoffeeLint** 5.2.0 to 5.2.3 [#2892](https://github.com/sider/runners/pull/2892)
 - **Cppcheck** 2.6.1 -> 2.6.3 [#2876](https://github.com/sider/runners/pull/2876)
 - **detekt** 1.18.1 -> 1.19.0 [#2836](https://github.com/sider/runners/pull/2836)
 - **JSHint** 2.13.1 -> 2.13.3 [#2889](https://github.com/sider/runners/pull/2889)
