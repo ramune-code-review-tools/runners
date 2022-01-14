@@ -13,6 +13,7 @@ Updated tools:
 - **detekt** 1.18.1 -> 1.19.0 [#2836](https://github.com/sider/runners/pull/2836)
 - **ktlint** 0.42.1 -> 0.43.2 [#2846](https://github.com/sider/runners/pull/2846)
 - **LanguageTool** 5.5 -> 5.6 [#2880](https://github.com/sider/runners/pull/2880)
+- **Phinder** 0.9.3 -> 0.9.4 [#2881](https://github.com/sider/runners/pull/2881)
 - **PHP_CodeSniffer** 3.6.1 -> 3.6.2 [#2854](https://github.com/sider/runners/pull/2854)
 - **PHPMD** 2.10.2 -> 2.11.1 [#2865](https://github.com/sider/runners/pull/2865)
 - **PMD CPD** 6.40.0 -> 6.41.0 [#2833](https://github.com/sider/runners/pull/2833)
