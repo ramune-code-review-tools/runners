@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 Updated tools:
 
 - **actionlint** 1.6.7 -> 1.6.8 [#2816](https://github.com/sider/runners/pull/2816)
+- **Checkstyle** 9.1 -> 9.2.1 [#2884](https://github.com/sider/runners/pull/2884)
 - **Cppcheck** 2.6.1 -> 2.6.3 [#2876](https://github.com/sider/runners/pull/2876)
 - **detekt** 1.18.1 -> 1.19.0 [#2836](https://github.com/sider/runners/pull/2836)
 - **ktlint** 0.42.1 -> 0.43.2 [#2846](https://github.com/sider/runners/pull/2846)
