@@ -12,6 +12,7 @@ Updated tools:
 - **Checkstyle** 9.1 -> 9.2.1 [#2884](https://github.com/sider/runners/pull/2884)
 - **Cppcheck** 2.6.1 -> 2.6.3 [#2876](https://github.com/sider/runners/pull/2876)
 - **detekt** 1.18.1 -> 1.19.0 [#2836](https://github.com/sider/runners/pull/2836)
+- **JSHint** 2.13.1 -> 2.13.3 [#2889](https://github.com/sider/runners/pull/2889)
 - **ktlint** 0.42.1 -> 0.43.2 [#2846](https://github.com/sider/runners/pull/2846)
 - **LanguageTool** 5.5 -> 5.6 [#2880](https://github.com/sider/runners/pull/2880)
 - **Phinder** 0.9.3 -> 0.9.4 [#2881](https://github.com/sider/runners/pull/2881)
