@@ -1,6 +1,6 @@
 s = Runners::Testing::Smoke
 
-default_version = "6.0.6"
+default_version = "6.1.0"
 
 s.add_test(
   "multiline",

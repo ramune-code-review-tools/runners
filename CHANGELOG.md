@@ -20,6 +20,7 @@ Updated tools:
 - **PHP_CodeSniffer** 3.6.1 -> 3.6.2 [#2854](https://github.com/sider/runners/pull/2854)
 - **PHPMD** 2.10.2 -> 2.11.1 [#2865](https://github.com/sider/runners/pull/2865)
 - **PMD CPD** 6.40.0 -> 6.41.0 [#2833](https://github.com/sider/runners/pull/2833)
+- **Reek** 6.0.6 -> 6.1.0 [#2901](https://github.com/sider/runners/pull/2901)
 - **remark-lint** 10.0.0 -> 10.0.1 (remark-cli) [#2823](https://github.com/sider/runners/pull/2823)
 
 Misc:
