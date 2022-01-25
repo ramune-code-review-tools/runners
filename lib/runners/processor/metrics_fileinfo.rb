@@ -164,12 +164,6 @@ module Runners
             end
           end
         end
-
-        uncovered_files = last_committed_at.select{|k,v| v == ""}.keys
-        if !uncovered_files.empty?
-          trace_writer.message "Found globbed file(s) without mention in git log: #{uncovered_files}"
-          trace_writer.message "git log output: #{stdout}"
-        end
       end
     end
 
