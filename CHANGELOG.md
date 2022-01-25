@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 Updated tools:
 
 - **actionlint** 1.6.7 -> 1.6.8 [#2816](https://github.com/sider/runners/pull/2816)
+- **Brakeman** 5.1.2 -> 5.2.0 [#2861](https://github.com/sider/runners/pull/2861)
 - **Checkstyle** 9.1 -> 9.2.1 [#2884](https://github.com/sider/runners/pull/2884)
 - **CoffeeLint** 5.2.0 to 5.2.3 [#2892](https://github.com/sider/runners/pull/2892)
 - **Cppcheck** 2.6.1 -> 2.6.3 [#2876](https://github.com/sider/runners/pull/2876)
@@ -20,6 +21,7 @@ Updated tools:
 - **PHP_CodeSniffer** 3.6.1 -> 3.6.2 [#2854](https://github.com/sider/runners/pull/2854)
 - **PHPMD** 2.10.2 -> 2.11.1 [#2865](https://github.com/sider/runners/pull/2865)
 - **PMD CPD** 6.40.0 -> 6.41.0 [#2833](https://github.com/sider/runners/pull/2833)
+- **pylint** 2.11.1 -> 2.12.2 [#2842](https://github.com/sider/runners/pull/2842)
 - **Reek** 6.0.6 -> 6.1.0 [#2901](https://github.com/sider/runners/pull/2901)
 - **remark-lint** 10.0.0 -> 10.0.1 (remark-cli) [#2823](https://github.com/sider/runners/pull/2823)
 - **SwiftLint** 0.45.1 -> 0.46.1 [#2911](https://github.com/sider/runners/pull/2911)
