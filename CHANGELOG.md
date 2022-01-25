@@ -22,6 +22,7 @@ Updated tools:
 - **PMD CPD** 6.40.0 -> 6.41.0 [#2833](https://github.com/sider/runners/pull/2833)
 - **Reek** 6.0.6 -> 6.1.0 [#2901](https://github.com/sider/runners/pull/2901)
 - **remark-lint** 10.0.0 -> 10.0.1 (remark-cli) [#2823](https://github.com/sider/runners/pull/2823)
+- **SwiftLint** 0.45.1 -> 0.46.1 [#2911](https://github.com/sider/runners/pull/2911)
 
 Misc:
 
