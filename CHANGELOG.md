@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 Updated tools:
 
 - **Brakeman** 5.2.0 -> 5.2.1 [#2916](https://github.com/sider/runners/pull/2916)
+- **SwiftLint** 0.46.1 -> 0.46.2 [#2926](https://github.com/sider/runners/pull/2926)
 
 ## 0.57.0
 
