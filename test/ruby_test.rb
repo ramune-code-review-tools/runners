@@ -680,6 +680,7 @@ EOF
   end
 
   def test_install_gems_with_other_sources
+    skip("Ruby gems mirror does not work")
     with_workspace do |workspace|
       processor = new_processor(workspace: workspace, config_yaml: <<~YAML)
         linter:
@@ -760,6 +761,7 @@ EOF
   end
 
   def test_install_gems_with_only_other_rubygems
+    skip("Ruby gems mirror does not work")
     with_workspace do |workspace|
       processor = new_processor(workspace: workspace, config_yaml: <<~YAML)
         linter:
