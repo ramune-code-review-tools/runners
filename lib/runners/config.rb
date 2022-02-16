@@ -40,6 +40,7 @@ module Runners
       "**/vendor/**",
       "*.map",
       "*.min.*",
+      "*.chunk.js",
     ].freeze
 
     def self.load_from_dir(dir)
