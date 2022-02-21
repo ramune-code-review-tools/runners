@@ -1,6 +1,6 @@
 s = Runners::Testing::Smoke
 
-default_version = "9.2.1"
+default_version = "9.3"
 
 s.add_test(
   "success",

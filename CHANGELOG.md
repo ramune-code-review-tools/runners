@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 
 [Full diff](https://github.com/sider/runners/compare/0.57.1...HEAD)
 
+Updated tools:
+
+- **Checkstyle** 9.2.1 -> 9.3 [#2922](https://github.com/sider/runners/pull/2922)
+
 ## 0.57.1
 
 [Full diff](https://github.com/sider/runners/compare/0.57.0...0.57.1)
