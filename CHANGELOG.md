@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 Updated tools:
 
 - **Checkstyle** 9.2.1 -> 10.0 [#2922](https://github.com/sider/runners/pull/2922) [#2971](https://github.com/sider/runners/pull/2971)
+- **SwiftLint** 0.46.2 -> 0.46.3 [#2949](https://github.com/sider/runners/pull/2949)
 
 ## 0.57.1
 
