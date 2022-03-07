@@ -9,6 +9,8 @@ All notable changes to this project will be documented in this file.
 Updated tools:
 
 - **Checkstyle** 9.2.1 -> 10.0 [#2922](https://github.com/sider/runners/pull/2922) [#2971](https://github.com/sider/runners/pull/2971)
+- **CoffeeLint** 5.2.3 to 5.2.4 [#2924](https://github.com/sider/runners/pull/2924)
+- **JSHint** 2.13.3 -> 2.13.4 [#2915](https://github.com/sider/runners/pull/2915)
 - **SwiftLint** 0.46.2 -> 0.46.3 [#2949](https://github.com/sider/runners/pull/2949)
 
 ## 0.57.1
@@ -18,7 +20,6 @@ Updated tools:
 Updated tools:
 
 - **Brakeman** 5.2.0 -> 5.2.1 [#2916](https://github.com/sider/runners/pull/2916)
-- **JSHint** 2.13.3 -> 2.13.4 [#2915](https://github.com/sider/runners/pull/2915)
 - **SwiftLint** 0.46.1 -> 0.46.2 [#2926](https://github.com/sider/runners/pull/2926)
 
 ## 0.57.0
