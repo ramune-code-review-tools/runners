@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 
-gem 'haml_lint', '0.37.1'
+gem 'haml_lint', '0.40.0'
