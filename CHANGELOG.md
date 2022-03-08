@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 
 Updated tools:
 
+- **actionlint** 1.6.8 -> 1.6.9 [#2960](https://github.com/sider/runners/pull/2960)
 - **Checkstyle** 9.2.1 -> 10.0 [#2922](https://github.com/sider/runners/pull/2922) [#2971](https://github.com/sider/runners/pull/2971)
 - **CoffeeLint** 5.2.3 to 5.2.4 [#2924](https://github.com/sider/runners/pull/2924)
 - **cpplint** 1.5.6 -> 1.6.0 [#2943](https://github.com/sider/runners/pull/2943)
