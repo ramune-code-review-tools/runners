@@ -19,7 +19,7 @@ jobs:
           echo "::set-output name=node::$(jq --raw-output '.engines.node' package.json)"
           echo "::set-output name=npm::$(jq --raw-output '.engines.npm' package.json)"
         id: node-versions
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: ${{ steps.node-versions.outputs.node }}
       - run: npm install --global "npm@${{ steps.node-versions.outputs.npm }}"
