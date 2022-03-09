@@ -22,7 +22,7 @@ RUN cd "${RUNNERS_DIR}" && \
     lockfile_bundler_version=$(bundle exec ruby -e 'puts Bundler.locked_gems.bundler_version') && \
     bundle version | grep "Bundler version ${lockfile_bundler_version}"
 
-ARG SWIFTLINT_VERSION=0.46.4
+ARG SWIFTLINT_VERSION=0.46.5
 
 # Build SwiftLint
 RUN cd /tmp && \

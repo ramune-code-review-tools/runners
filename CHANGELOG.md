@@ -15,7 +15,7 @@ Updated tools:
 - **HAML-Lint** 0.37.1 -> 0.40.0 [#2951](https://github.com/sider/runners/pull/2951)
 - **JSHint** 2.13.3 -> 2.13.4 [#2915](https://github.com/sider/runners/pull/2915)
 - **RuboCop** 1.21.0 -> 1.25.1 [#2928](https://github.com/sider/runners/pull/2928)
-- **SwiftLint** 0.46.2 -> 0.46.4 [#2949](https://github.com/sider/runners/pull/2949) [#2973](https://github.com/sider/runners/pull/2973)
+- **SwiftLint** 0.46.2 -> 0.46.5 [#2949](https://github.com/sider/runners/pull/2949) [#2973](https://github.com/sider/runners/pull/2973) [#2974](https://github.com/sider/runners/pull/2974)
 
 ## 0.57.1
 
