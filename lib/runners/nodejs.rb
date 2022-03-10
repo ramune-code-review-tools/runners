@@ -167,10 +167,6 @@ module Runners
       end
     end
 
-    def npm_cache_clear
-      capture3! "npm", "cache", "clear", "--force"
-    end
-
     def list_installed_npm_deps_with(names:)
       return {} unless node_modules_path.exist?
 
