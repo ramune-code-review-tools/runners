@@ -59,6 +59,7 @@ module Runners
 
     def setup
       begin
+        npm_cache_clear
         install_nodejs_deps constraints: CONSTRAINTS
       rescue UserError => exn
         return Results::Failure.new(guid: guid, message: exn.message, analyzer: nil)
