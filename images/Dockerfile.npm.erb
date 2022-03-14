@@ -2,11 +2,6 @@ FROM sider/devon_rex_npm:2.46.0
 
 <%= render_erb 'images/Dockerfile.base.erb' %>
 
-USER root
-RUN npm install --global "npm@latest"
-USER $RUNNER_USER
-
-
 # Install the default version
 COPY --chown=<%= chown %> images/<%= analyzer %>/package.json ${RUNNERS_DEPS_DIR}/
 RUN cd "${RUNNERS_DEPS_DIR}" && \
