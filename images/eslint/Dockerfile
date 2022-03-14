@@ -22,6 +22,11 @@ RUN cd "${RUNNERS_DIR}" && \
     lockfile_bundler_version=$(bundle exec ruby -e 'puts Bundler.locked_gems.bundler_version') && \
     bundle version | grep "Bundler version ${lockfile_bundler_version}"
 
+USER root
+RUN npm install --global "npm@latest"
+USER $RUNNER_USER
+
+
 # Install the default version
 COPY --chown=${RUNNER_USER}:${RUNNER_GROUP} images/eslint/package.json ${RUNNERS_DEPS_DIR}/
 RUN cd "${RUNNERS_DEPS_DIR}" && \
