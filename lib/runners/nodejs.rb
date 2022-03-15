@@ -137,6 +137,8 @@ module Runners
     def npm_install(*deps, subcommand: "install", flags: [])
       # NOTE: `--force` is to install *unmet* dependencies like npm 6 or Yarn.
       flags = %w[
+        --loglevel
+        verbose
         --force
         --ignore-scripts
         --no-audit
