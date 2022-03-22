@@ -147,6 +147,7 @@ module Runners
         --no-progress
         --no-save
         --no-update-notifier
+        --prefer-online
       ] + flags
 
       trace_writer.message "Installing npm dependencies..."
