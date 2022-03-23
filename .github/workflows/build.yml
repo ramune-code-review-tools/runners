@@ -111,7 +111,9 @@ jobs:
 
           echo 'Publish to Amazon ECR Public ...'
           bundle exec rake docker:tag REGISTRY_NEW="${AWS_ECR_REGISTRY}"
-          bundle exec rake docker:push REGISTRY="${AWS_ECR_REGISTRY}"
+          bundle exec rake docker:push REGISTRY="${AWS_ECR_REGISTRY}" || \
+          (echo 'docker:push attempt 2' && bundle exec rake docker:push REGISTRY="${AWS_ECR_REGISTRY}") || \
+          (echo 'docker:push attempt 3' && bundle exec rake docker:push REGISTRY="${AWS_ECR_REGISTRY}")
         env:
           ANALYZER: ${{ matrix.analyzer }}
           TAG: ${{ steps.define_vars.outputs.tag }}
@@ -123,7 +125,9 @@ jobs:
 
           echo 'Publish to Amazon ECR Public ...'
           bundle exec rake docker:tag TAG_NEW=latest REGISTRY_NEW="${AWS_ECR_REGISTRY}"
-          bundle exec rake docker:push TAG=latest REGISTRY="${AWS_ECR_REGISTRY}"
+          bundle exec rake docker:push TAG=latest REGISTRY="${AWS_ECR_REGISTRY}" || \
+          (echo 'docker:push attempt 2' && bundle exec rake docker:push TAG=latest REGISTRY="${AWS_ECR_REGISTRY}") || \
+          (echo 'docker:push attempt 3' && bundle exec rake docker:push TAG=latest REGISTRY="${AWS_ECR_REGISTRY}")
         env:
           ANALYZER: ${{ matrix.analyzer }}
           TAG: ${{ steps.define_vars.outputs.tag }}
