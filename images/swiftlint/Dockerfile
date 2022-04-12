@@ -22,13 +22,14 @@ RUN cd "${RUNNERS_DIR}" && \
     lockfile_bundler_version=$(bundle exec ruby -e 'puts Bundler.locked_gems.bundler_version') && \
     bundle version | grep "Bundler version ${lockfile_bundler_version}"
 
-ARG SWIFTLINT_VERSION=0.46.5
+ARG SWIFTLINT_VERSION=0.47.0
 
 # Build SwiftLint
 RUN cd /tmp && \
     curl -sSL --compressed "https://github.com/realm/SwiftLint/archive/${SWIFTLINT_VERSION}.tar.gz" | tar -xz && \
     cd "SwiftLint-${SWIFTLINT_VERSION}" && \
-    make install "BINARIES_FOLDER=${RUNNER_USER_BIN}" && \
+    make build_x86_64 "SWIFT_BUILD_FLAGS=--configuration release" && \
+    cp $(swift build --arch x86_64 --configuration release --show-bin-path)/swiftlint ${RUNNER_USER_BIN} && \
     cd .. && \
     rm -rf "SwiftLint-${SWIFTLINT_VERSION}" && \
     swiftlint version | grep "${SWIFTLINT_VERSION}"
