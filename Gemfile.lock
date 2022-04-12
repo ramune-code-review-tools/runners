@@ -4,7 +4,7 @@ PATH
     runners (0.58.0)
       aws-sdk-s3 (>= 1.87)
       bugsnag (>= 6.18)
-      bundler (>= 2.2.20, < 2.3.0)
+      bundler (>= 2.2.20, < 2.4.0)
       erb (>= 2.2)
       fileutils (>= 1.5)
       forwardable (>= 1.3)

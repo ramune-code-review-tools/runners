@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # standard libraries
-  spec.add_dependency "bundler", ">= 2.2.20", "< 2.3.0" # NOTE: It must be between the range required by sider/devon_rex.
+  spec.add_dependency "bundler", ">= 2.2.20", "< 2.4.0" # NOTE: It must be between the range required by sider/devon_rex.
   spec.add_dependency "erb", ">= 2.2"
   spec.add_dependency "fileutils", ">= 1.5"
   spec.add_dependency "forwardable", ">= 1.3"
