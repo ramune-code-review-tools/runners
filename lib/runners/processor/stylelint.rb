@@ -25,7 +25,7 @@ module Runners
     register_config_schema SCHEMA.config
 
     CONSTRAINTS = {
-      "stylelint" => Gem::Requirement.new(">= 8.3.0", "< 14.0.0").freeze,
+      "stylelint" => Gem::Requirement.new(">= 8.3.0", "< 15.0.0").freeze,
     }.freeze
 
     DEFAULT_TARGET_FILES = "*.{css,less,sass,scss,sss}".freeze

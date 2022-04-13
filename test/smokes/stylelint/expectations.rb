@@ -1,6 +1,6 @@
 s = Runners::Testing::Smoke
 
-default_version = "13.13.1"
+default_version = "14.6.1"
 
 s.add_test(
   "success",
@@ -294,6 +294,17 @@ s.add_test(
   type: "success",
   issues: [
     {
+      message: "Unknown word",
+      links: [],
+      id: "CssSyntaxError",
+      path: "test.sss",
+      location: { start_line: 2, start_column: 3 },
+      object: { severity: "error" },
+      git_blame_info: {
+        commit: :_, line_hash: "0e3f74c01e7e7d8437a814bb562c4173ffdc1fef", original_line: 2, final_line: 2
+      }
+    },
+    {
       message: "Expected custom property to come before declaration",
       links: [],
       id: "order/order",
@@ -324,6 +335,17 @@ s.add_test(
       object: { severity: "error" },
       git_blame_info: {
         commit: :_, line_hash: "dd97e7eb6460da8c61ebfc943266ca7043385bc7", original_line: 6, final_line: 6
+      }
+    },
+    {
+      message: 'Unexpected unknown at-rule "@color:"',
+      links: [],
+      id: "scss/at-rule-no-unknown",
+      path: "test.less",
+      location: { start_line: 1, start_column: 1 },
+      object: { severity: "error" },
+      git_blame_info: {
+        commit: :_, line_hash: "bea47f8ea829b065c5fd32ab1da23208495226e1", original_line: 1, final_line: 1
       }
     },
     {
@@ -455,7 +477,7 @@ s.add_test(
       }
     }
   ],
-  warnings: [{ message: "Installed `stylelint@7.13.0` does not satisfy our constraint `>=8.3.0 <14.0.0`. Please update it as possible.", file: "package.json" }]
+  warnings: [{ message: "Installed `stylelint@7.13.0` does not satisfy our constraint `>=8.3.0 <15.0.0`. Please update it as possible.", file: "package.json" }]
 )
 
 s.add_test(
@@ -682,6 +704,28 @@ s.add_test(
   type: "success",
   issues: [
     {
+      path: "a.sass",
+      id: "CssSyntaxError",
+      message: /Unknown word/,
+      location: { start_line: 2, start_column: 3 },
+      links: [],
+      object: { severity: "error" },
+      git_blame_info: {
+        commit: :_, line_hash: "6cd973a674855ca64ab47605c8d41b1c1d847a46", original_line: 2, final_line: 2
+      }
+    },
+    {
+      path: "a.sss",
+      id: "CssSyntaxError",
+      message: /Unknown word/,
+      location: { start_line: 2, start_column: 3 },
+      links: [],
+      object: { severity: "error" },
+      git_blame_info: {
+        commit: :_, line_hash: "6cd973a674855ca64ab47605c8d41b1c1d847a46", original_line: 2, final_line: 2
+      }
+    },
+    {
       path: "a.css",
       id: "property-no-unknown",
       message: /Unexpected unknown property/,
@@ -704,17 +748,6 @@ s.add_test(
       }
     },
     {
-      path: "a.sass",
-      id: "property-no-unknown",
-      message: /Unexpected unknown property/,
-      location: { start_line: 2, start_column: 3 },
-      links: %W[https://github.com/stylelint/stylelint/tree/#{default_version}/lib/rules/property-no-unknown],
-      object: { severity: "error" },
-      git_blame_info: {
-        commit: :_, line_hash: "6cd973a674855ca64ab47605c8d41b1c1d847a46", original_line: 2, final_line: 2
-      }
-    },
-    {
       path: "a.scss",
       id: "property-no-unknown",
       message: /Unexpected unknown property/,
@@ -723,17 +756,6 @@ s.add_test(
       object: { severity: "error" },
       git_blame_info: {
         commit: :_, line_hash: "77655f0c8320932fddf4beae90e00b7c34fd8aa0", original_line: 2, final_line: 2
-      }
-    },
-    {
-      path: "a.sss",
-      id: "property-no-unknown",
-      message: /Unexpected unknown property/,
-      location: { start_line: 2, start_column: 3 },
-      links: %W[https://github.com/stylelint/stylelint/tree/#{default_version}/lib/rules/property-no-unknown],
-      object: { severity: "error" },
-      git_blame_info: {
-        commit: :_, line_hash: "6cd973a674855ca64ab47605c8d41b1c1d847a46", original_line: 2, final_line: 2
       }
     }
   ]
