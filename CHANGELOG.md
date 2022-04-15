@@ -10,6 +10,7 @@ Updated tools:
 
 - **ESLint** 8.5.0 -> 8.13.0 [#3005](https://github.com/sider/runners/pull/3005) [#3022](https://github.com/sider/runners/pull/3022)
 - **LanguageTool** 5.6 -> 5.7 [#3012](https://github.com/sider/runners/pull/3012)
+- **RuboCop** 1.25.1 -> 1.27.0 [#3018](https://github.com/sider/runners/pull/3018)
 - **SwiftLint** 0.46.5 -> 0.47.0 [#2997](https://github.com/sider/runners/pull/2997)
 
 ## 0.58.0
