@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 
 [Full diff](https://github.com/sider/runners/compare/0.59.0...HEAD)
 
+Tool changes:
+
+- **stylelint** reverted back to version 13.13.1 due to compatibility issues (removed `--syntax` option)
+
 ## 0.59.0
 
 [Full diff](https://github.com/sider/runners/compare/0.58.0...0.59.0)
