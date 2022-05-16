@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 
 [Full diff](https://github.com/sider/runners/compare/0.59.1...HEAD)
 
+Updated tools:
+
+- **SwiftLint** 0.47.0 -> 0.47.1 [#3057](https://github.com/sider/runners/pull/3057)
+
 ## 0.59.1
 
 [Full diff](https://github.com/sider/runners/compare/0.59.0...0.59.1)
