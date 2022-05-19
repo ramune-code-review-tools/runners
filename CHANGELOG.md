@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 
 [Full diff](https://github.com/sider/runners/compare/0.60.0...HEAD)
 
+Updated tools:
+
+- **actionlint** 1.6.9 -> 1.6.13 [#3083](https://github.com/sider/runners/pull/3083)
+
 ## 0.60.0
 
 [Full diff](https://github.com/sider/runners/compare/0.59.1...0.60.0)
