@@ -5,9 +5,9 @@ module Runners
     attr_reader commit: String
     attr_reader original_line: Integer
     attr_reader final_line: Integer
-    attr_reader line_hash: Integer
+    attr_reader line_hash: String
 
-    def initialize: (commit: String, original_line: Integer, final_line: Integer, line_hash: Integer) -> void
+    def initialize: (commit: String, original_line: Integer, final_line: Integer, line_hash: String) -> void
 
     def as_json: () -> Hash[Symbol, String | Integer]
   end

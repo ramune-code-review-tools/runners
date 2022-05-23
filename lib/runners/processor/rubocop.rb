@@ -72,12 +72,13 @@ module Runners
       )
 
       _, stderr, status = capture3(cmd.bin, *cmd.args)
+      exitstatus = status.exitstatus
       check_rubocop_yml_warning(stderr)
 
       # 0: no offences
       # 1: offences exist
       # 2: RuboCop crashes by unhandled errors.
-      unless [0, 1].include?(status.exitstatus)
+      unless exitstatus && [0, 1].include?(exitstatus)
         error_message = stderr.strip
         if error_message.empty?
           error_message = "RuboCop raised an unexpected error. See the analysis log for details."

@@ -55,8 +55,9 @@ module Runners
         *(config_linter[:config]&.then { |config| ["-config", config] }),
         *Array(config_linter[:target] || config_linter[:dir]),
       )
+      exitstatus = status.exitstatus
 
-      if [0, 2].include?(status.exitstatus)
+      if exitstatus && [0, 2].include?(exitstatus)
         Results::Success.new(guid: guid, analyzer: analyzer).tap do |result|
           construct_result(stdout) { |issue| result.add_issue(issue) }
         end

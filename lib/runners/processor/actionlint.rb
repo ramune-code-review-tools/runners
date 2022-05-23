@@ -57,10 +57,11 @@ module Runners
 
     def analyze(changes)
       stdout, stderr, status = capture3(analyzer_bin, *analyzer_options)
+      exitstatus = status.exitstatus
 
       # @see https://github.com/rhysd/actionlint/blob/v1.6.3/docs/usage.md#exit-status
       case
-      when [0, 1].include?(status.exitstatus)
+      when exitstatus && [0, 1].include?(exitstatus)
         # Zero or more issue found => Success
         Results::Success.new(guid: guid, analyzer: analyzer, issues: parse_result(stdout))
       when ALLOWED_ERRORS.any? { |pattern| stderr.include?(pattern) }
@@ -69,7 +70,7 @@ module Runners
         Results::Success.new(guid: guid, analyzer: analyzer)
       else
         # Other outcomes (e.g. fatal errors) with exit code 2, 3 => Failure
-        raise "#{analyzer_name} returned exit code #{status.exitstatus}. See logs for details."
+        raise "#{analyzer_name} returned exit code #{exitstatus.inspect}. See logs for details."
       end
     end
 

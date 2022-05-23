@@ -189,8 +189,9 @@ module Runners
       )
 
       output_json = report_file_exist? ? read_report_json { nil } : nil
+      exitstatus = status.exitstatus
 
-      if [0, 1].include?(status.exitstatus) && output_json
+      if exitstatus && [0, 1].include?(exitstatus) && output_json
         Results::Success.new(guid: guid, analyzer: analyzer).tap do |result|
           parse_result(output_json) { |issue| result.add_issue(issue) }
         end

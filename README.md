@@ -171,23 +171,33 @@ analyzer_runner@838f831e5aa7:/work$ rubocop .
 
 We check the types of our Ruby source files via [RBS](https://github.com/ruby/rbs) and [Steep](https://github.com/soutaro/steep).
 
+First, to install RBS dependencies, run:
+
+```shell-session
+$ bundle exec rbs collection install
+```
+
+Then, run:
+
 ```shell-session
 $ bundle exec rake steep:check
 ```
 
-If there is no way to resolve Steep errors, run:
+If you cannot find a way to fix type errors, run:
 
 ```shell-session
 $ bundle exec rake steep:check'[true]'
 ```
 
-...and commit the updated [`steep_expectations.yml`](steep_expectations.yml).
+...and then, commit the updated the [`steep_expectations.yml`](steep_expectations.yml) file.
 
-To update the third-party gems' RBS, run:
+Also, to update RBS dependencies, run:
 
 ```shell-session
-$ bundle exec rake rbs:update_gems
+$ bundle exec rbs collection update
 ```
+
+See the [`rbs collection` doc](https://github.com/ruby/rbs/blob/master/docs/collection.md) for details.
 
 ## License
 

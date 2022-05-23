@@ -23,7 +23,7 @@ module Runners
       @tempfile = Tempfile.new
       @written_items = 0
 
-      @client = Aws::S3::Client.new({
+      @client = Aws::S3::Client.new(**{
         retry_limit: 5,
         retry_base_delay: 1.2,
         instance_profile_credentials_retries: 5,

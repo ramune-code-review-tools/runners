@@ -3,10 +3,16 @@ module Runners
     class Error < SystemError
     end
 
+    class CloneFailed < Error
+    end
+
     class FetchFailed < Error
     end
 
     class CheckoutFailed < Error
+    end
+
+    class SparseCheckoutFailed < Error
     end
 
     class BlameFailed < Error

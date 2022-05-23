@@ -6,9 +6,8 @@ bundle install
 bundle exec lefthook install
 
 echo
-echo '> Updating gem_rbs_collection...'
-git submodule init
-git submodule update
+echo '> Installing RBS dependencies...'
+bundle exec rbs collection install
 
 echo
 echo '> Available Rake tasks:'

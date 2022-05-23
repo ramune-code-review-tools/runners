@@ -94,12 +94,13 @@ module Runners
         *quiet,
         *glob,
       )
+      exitstatus = status.exitstatus
 
       # https://github.com/stylelint/stylelint/blob/master/docs/user-guide/cli.md#exit-codes
       # 0 => No Issues
       # 2 => Issues exist
       # Others => Something wrong, target files don't exist, ...
-      unless [0, 2].include?(status.exitstatus)
+      unless exitstatus && [0, 2].include?(exitstatus)
         return Results::Failure.new(guid: guid, message: [stdout, stderr].join("\n"), analyzer: analyzer)
       end
 

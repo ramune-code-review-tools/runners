@@ -73,9 +73,10 @@ module Runners
       trace_writer.message "Analyzing #{files.size} file(s)..."
 
       stdout, stderr, status = capture3(analyzer_bin, *analyzer_options, *files)
+      exitstatus = status.exitstatus
 
       # @see https://github.com/koalaman/shellcheck/blob/de9ab4e6ef5262eeba6871a03ef3938a93b44395/shellcheck.1.md#return-values
-      if [0, 1].include? status.exitstatus
+      if exitstatus && [0, 1].include?(exitstatus)
         Results::Success.new(guid: guid, analyzer: analyzer).tap do |result|
           parse_result(stdout) do |issue|
             result.add_issue(issue)

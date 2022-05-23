@@ -1,21 +1,19 @@
 target :lib do
-  signature "sig"
-  repo_path "vendor/rbs/gem_rbs_collection/gems"
+  repo_path ".gem_rbs_collection/"
 
   check "exe/*"
-  check "lib"
+  check "lib/**/*.rb"
 
-  library "pathname"
-  library "set"
-  library "tmpdir"
-  library "forwardable"
-  library "time"
-  library "uri"
+  # Standard libraries
+  library "digest"
   library "optparse"
-  library "erb"
   library "rubygems"
+  library "set"
   library "tempfile"
-  library "strong_json"
-  library "retryable"
-  library "nokogiri"
+  library "tmpdir"
+  library "uri"
+  library "yaml", "dbm", "pstore" # HACK: `dbm` and `pstore` required by `yaml`
+
+  # 3rd-party libraries
+  # ...
 end

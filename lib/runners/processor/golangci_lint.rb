@@ -87,22 +87,23 @@ module Runners
       ex_no_go_files = 5
 
       stdout, _stderr, status = capture3(analyzer_bin, "run", *analyzer_options)
+      exitstatus = status.exitstatus
 
-      if [ex_success, ex_issues_found].include?(status.exitstatus) && !stdout.empty?
+      if exitstatus && [ex_success, ex_issues_found].include?(exitstatus) && !stdout.empty?
         return Results::Success.new(guid: guid, analyzer: analyzer).tap do |result|
           parse_result(stdout) { |v| result.add_issue(v) }
         end
       end
 
-      if status.exitstatus == ex_failure
+      if exitstatus == ex_failure
         return Results::Failure.new(guid: guid, analyzer: analyzer)
       end
 
-      if status.exitstatus == ex_no_go_files
+      if exitstatus == ex_no_go_files
         return Results::Success.new(guid: guid, analyzer: analyzer)
       end
 
-      raise "Analysis errored with the exit status #{status.exitstatus.inspect}."
+      raise "Analysis errored with the exit status #{exitstatus.inspect}."
     end
 
     private
