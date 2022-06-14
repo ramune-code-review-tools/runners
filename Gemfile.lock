@@ -58,7 +58,7 @@ GEM
     git_diff_parser (4.0.0)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
-    jmespath (1.6.0)
+    jmespath (1.6.1)
     json (2.6.1)
     jsonseq (0.2.0)
     language_server-protocol (3.16.0.3)
