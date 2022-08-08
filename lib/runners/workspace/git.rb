@@ -123,7 +123,7 @@ module Runners
     # @see https://git-scm.com/docs/git-sparse-checkout
     # @see https://git-scm.com/docs/gitignore
     def git_sparse_checkout_set(*patterns)
-      shell.capture3!("git", "sparse-checkout", "set", *patterns)
+      shell.capture3!("git", "sparse-checkout", "set",  "--no-cone", *patterns)
     rescue Shell::ExecError => exn
       raise SparseCheckoutFailed, "git-sparse-checkout failed: #{exn.stderr_str}"
     end
