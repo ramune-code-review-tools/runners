@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 Updated tools:
 
 - **actionlint** 1.6.9 -> 1.6.13 [#3083](https://github.com/sider/runners/pull/3083)
+- **SwiftLint** 0.47.1 -> 0.48.0 [#3184](https://github.com/sider/runners/pull/3184)
 
 ## 0.60.0
 
