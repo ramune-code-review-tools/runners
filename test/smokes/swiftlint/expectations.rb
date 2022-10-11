@@ -1,6 +1,6 @@
 s = Runners::Testing::Smoke
 
-default_version = "0.48.0"
+default_version = "0.49.1"
 
 s.add_test(
   "success",
@@ -143,19 +143,7 @@ s.add_test(
   "ignore_warnings",
   type: "success",
   analyzer: { name: "SwiftLint", version: default_version },
-  issues: [
-    {
-      path: "test.swift",
-      location: { start_line: 3 },
-      id: "force_cast",
-      message: "Force casts should be avoided.",
-      links: %w[https://realm.github.io/SwiftLint/force_cast.html],
-      object: { severity: "Error" },
-      git_blame_info: {
-        commit: :_, line_hash: "2befe6e35cfbdd67cda2cd3be9f4660634d39463", original_line: 3, final_line: 3
-      }
-    }
-  ]
+  issues: []
 )
 
 s.add_test("no_swift_file", type: "success", issues: [], analyzer: { name: "SwiftLint", version: default_version })

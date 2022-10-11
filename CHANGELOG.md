@@ -6,6 +6,15 @@ All notable changes to this project will be documented in this file.
 
 [Full diff](https://github.com/sider/runners/compare/0.61.0...HEAD)
 
+Updated tools:
+
+- **SwiftLint** 0.48.0 -> 0.49.1 [#3228](https://github.com/sider/runners/pull/3228)
+
+Updated environments:
+
+- **devon_rex** 2.46.0 -> 2.47.0 [#3273](https://github.com/sider/runners/pull/3273) ([diff](https://github.com/sider/devon_rex/compare/2.46.0...2.47.0)) ([changelog](https://github.com/sider/devon_rex/blob/master/CHANGELOG.md#2470))
+    - **Swift 5.7** environment
+
 ## 0.61.0
 
 [Full diff](https://github.com/sider/runners/compare/0.60.0...0.61.0)

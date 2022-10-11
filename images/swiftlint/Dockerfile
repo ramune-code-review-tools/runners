@@ -2,7 +2,7 @@
 # NOTE: DO *NOT* EDIT THIS FILE. IT IS GENERATED.
 # PLEASE UPDATE Dockerfile.erb INSTEAD OF THIS FILE.
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-FROM sider/devon_rex_swift:2.46.0
+FROM sider/devon_rex_swift:2.47.0
 
 
 ENV RUNNERS_DEPS_DIR ${RUNNER_USER_HOME}/dependencies
@@ -22,7 +22,7 @@ RUN cd "${RUNNERS_DIR}" && \
     lockfile_bundler_version=$(bundle exec ruby -e 'puts Bundler.locked_gems.bundler_version') && \
     bundle version | grep "Bundler version ${lockfile_bundler_version}"
 
-ARG SWIFTLINT_VERSION=0.48.0
+ARG SWIFTLINT_VERSION=0.49.1
 
 # Build SwiftLint
 RUN cd /tmp && \

@@ -11,7 +11,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 8e1f19e0c8768b6bac2815fe65a3310298ba400e
+    revision: e64ed00f3f72b2db55d03f8ad1803aacba6a662b
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: ast
@@ -19,7 +19,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 8e1f19e0c8768b6bac2815fe65a3310298ba400e
+    revision: e64ed00f3f72b2db55d03f8ad1803aacba6a662b
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: aws-sdk-core
@@ -27,7 +27,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 8e1f19e0c8768b6bac2815fe65a3310298ba400e
+    revision: e64ed00f3f72b2db55d03f8ad1803aacba6a662b
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: aws-sdk-kms
@@ -35,7 +35,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 8e1f19e0c8768b6bac2815fe65a3310298ba400e
+    revision: e64ed00f3f72b2db55d03f8ad1803aacba6a662b
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: aws-sdk-s3
@@ -43,7 +43,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 8e1f19e0c8768b6bac2815fe65a3310298ba400e
+    revision: e64ed00f3f72b2db55d03f8ad1803aacba6a662b
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: cgi
@@ -67,7 +67,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 8e1f19e0c8768b6bac2815fe65a3310298ba400e
+    revision: e64ed00f3f72b2db55d03f8ad1803aacba6a662b
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: json
@@ -83,7 +83,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 8e1f19e0c8768b6bac2815fe65a3310298ba400e
+    revision: e64ed00f3f72b2db55d03f8ad1803aacba6a662b
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: nokogiri
@@ -91,7 +91,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 8e1f19e0c8768b6bac2815fe65a3310298ba400e
+    revision: e64ed00f3f72b2db55d03f8ad1803aacba6a662b
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: parallel
@@ -99,7 +99,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 8e1f19e0c8768b6bac2815fe65a3310298ba400e
+    revision: e64ed00f3f72b2db55d03f8ad1803aacba6a662b
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: rainbow
@@ -107,7 +107,7 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 8e1f19e0c8768b6bac2815fe65a3310298ba400e
+    revision: e64ed00f3f72b2db55d03f8ad1803aacba6a662b
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: retryable
@@ -115,11 +115,11 @@ gems:
   source:
     type: git
     name: ruby/gem_rbs_collection
-    revision: 8e1f19e0c8768b6bac2815fe65a3310298ba400e
+    revision: e64ed00f3f72b2db55d03f8ad1803aacba6a662b
     remote: https://github.com/ruby/gem_rbs_collection.git
     repo_dir: gems
 - name: runners
-  version: 0.60.0
+  version: 0.61.0
   source:
     type: rubygems
 - name: strong_json

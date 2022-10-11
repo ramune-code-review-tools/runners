@@ -4,7 +4,7 @@
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 FROM koalaman/shellcheck:v0.8.0 as shellcheck
 
-FROM sider/devon_rex_base:2.46.0
+FROM sider/devon_rex_base:2.47.0
 
 
 ENV RUNNERS_DEPS_DIR ${RUNNER_USER_HOME}/dependencies
